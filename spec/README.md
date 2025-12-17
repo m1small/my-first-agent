@@ -1,1 +1,1 @@
-Agent Spec
+This folder contains specifications (input for agents)
