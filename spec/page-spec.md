@@ -6,13 +6,13 @@ A simple landing page introducing Matt Small.
 MAIN PARTS:
 1. Headline ("Hi, I'm Matt, Principal Consultant of mattasmall.com")
  - Font Style: Strong Bold
- - Font Size: 32px (24px on mobile)
+ - Font Size: 32px (26px on mobile)
  - Font Alignment: Centered
  - Margin Bottom: 16px
 
 2. Short bio paragraph (150 words)
  - Font Style: Body
- - Font Size: 16px (12px on mobile)
+ - Font Size: 16px (14px on mobile)
  - Font Alignment: Centered
  - Margin Bottom: 16px
  - Opening theme: "Catalyst" - driving systemic and cultural change to improve companies
@@ -22,7 +22,7 @@ MAIN PARTS:
 
 3. Credibility Badges (horizontal row)
  - Layout: Horizontal row, centered, wrap on mobile
- - Font Size: 12px (10px on mobile)
+ - Font Size: 12px (12px on mobile)
  - Color: Silver (#C0C0C0) with subtle gold accent
  - Spacing: 8px between badges, 24px margin top
  - Style: Pill-shaped, subtle background (#3a3d63), 8px padding vertical, 16px padding horizontal
@@ -46,7 +46,7 @@ MAIN PARTS:
  - Height: 100px
  - On Hover: Slight Scale Up (1.05)
  - On Click: mailto:mattasmall@gmail.com?subject=Consultation%20Request
- - Font Size: 18px (16px on mobile)
+ - Font Size: 18px (18px on mobile)
  - Font Weight: 600
 
 STYLE RULES:
