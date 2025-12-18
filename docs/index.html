@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matt Small - Principal Consultant specializing in FinOps, Enterprise AI adoption, and Cloud strategy. 15+ years driving transformation at Fortune 500 companies and startups.">
+    <title>Matt Small - Principal Consultant</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #313357;
+            color: #C0C0C0;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Main Content Container */
+        main {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        /* Headline Styles */
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #C0C0C0;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        /* Bio Paragraph Styles */
+        .bio {
+            font-size: 16px;
+            color: #C0C0C0;
+            margin-bottom: 16px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        /* Credibility Badges Container */
+        .badges-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+
+        /* Individual Badge Styles */
+        .badge {
+            background-color: #3a3d63;
+            color: #C0C0C0;
+            font-size: 12px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            white-space: nowrap;
+            border: 1px solid rgba(255, 185, 0, 0.2);
+        }
+
+        /* CTA Button Container */
+        .cta-container {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Call-to-Action Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 100px;
+            background-color: #ffb900;
+            color: #313357;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:active {
+            transform: scale(1.02);
+        }
+
+        .cta-button:focus {
+            outline: 3px solid #ffb900;
+            outline-offset: 4px;
+        }
+
+        /* Mobile Responsive Styles - Increased by 2px per requirement */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 26px; /* Was 24px, increased by 2px */
+            }
+
+            .bio {
+                font-size: 14px; /* Was 12px, increased by 2px */
+            }
+
+            .badge {
+                font-size: 12px; /* Was 10px in spec, increased by 2px */
+            }
+
+            .cta-button {
+                width: 280px;
+                height: 90px;
+                font-size: 18px; /* Was 16px, increased by 2px */
+            }
+
+            main {
+                padding: 20px 15px;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .cta-button {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+        /* Accessibility: Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .cta-button {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main role="main">
+        <!-- Headline Section -->
+        <h1>Hi, I'm Matt, Principal Consultant of mattasmall.com</h1>
+
+        <!-- Bio Section -->
+        <p class="bio">
+            I'm a catalyst for systemic and cultural change, driving transformation that improves companies from the inside out. With over 15 years of experience spanning Fortune 500 enterprises and innovative startups, I specialize in FinOps, Enterprise AI adoption and governance, and Cloud strategy. My approach focuses on delivering measurable results through strategic alignment, operational excellence, and cultural transformation. Whether you're optimizing cloud costs, implementing AI governance frameworks, or architecting scalable cloud solutions, I bring proven expertise and a results-focused methodology. Let's work together to unlock your organization's full potential and drive sustainable, transformational change that delivers real business impact.
+        </p>
+
+        <!-- Credibility Badges Section -->
+        <div class="badges-container" role="list" aria-label="Professional credentials and expertise">
+            <span class="badge" role="listitem">AWS Solutions Architect</span>
+            <span class="badge" role="listitem">FinOps Certified</span>
+            <span class="badge" role="listitem">Kwaai.ai Board Member</span>
+            <span class="badge" role="listitem">15+ Years Cloud Platforms</span>
+            <span class="badge" role="listitem">RightScale Pioneer</span>
+            <span class="badge" role="listitem">Infrastructure-as-Code Expert</span>
+            <span class="badge" role="listitem">Enterprise AI Governance</span>
+            <span class="badge" role="listitem">Pulumi Alumni</span>
+            <span class="badge" role="listitem">Customer Success Leader</span>
+            <span class="badge" role="listitem">Strategic GTM Advisor</span>
+        </div>
+
+        <!-- Call-to-Action Section -->
+        <div class="cta-container">
+            <a href="mailto:mattasmall@gmail.com?subject=Consultation%20Request" 
+               class="cta-button" 
+               role="button" 
+               aria-label="Contact Matt Small to discuss AI and Cloud Optimization">
+                Talk AI and Cloud Optimization
+            </a>
+        </div>
+    </main>
+</body>
+</html>
