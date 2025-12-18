@@ -92,7 +92,7 @@ Built during **Agentics 101** to master specification-driven development.
 
 
 
-my-first-agent/ ├── spec/ # 📋 Specifications (read-only for agent) ├── docs/ # 📦 Generated code (deployed) ├── SAFETY.md # 🛡️ Safety protocols └── README.md # 📖 Documentation
+my-first-agent/ ├── specs/ # 📋 Specifications (read-only for agent) ├── docs/ # 📦 Generated code (deployed) ├── SAFETY.md # 🛡️ Safety protocols └── README.md # 📖 Documentation
 
 
 
@@ -100,9 +100,9 @@ my-first-agent/ ├── spec/ # 📋 Specifications (read-only for agent) ├�
 
 
 
-1. **Write Specification** in `spec/` with colors, measurements, behaviors
+1. **Write Specification** in `specs/` with colors, measurements, behaviors
 
-2. **Generate Code** using Claude.ai with system prompt to `src/`
+2. **Generate Code** using Claude.ai with system prompt
 
 3. **Review Output** for accuracy and quality
 
