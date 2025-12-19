@@ -1,9 +1,15 @@
-# Badges
+# Badges Component
 
-badges:
-1. AWS Solutions Architect
-2. FinOps Certified
-3. Kwaai.ai Board Member
+## Badge List
+
+### Primary Badges (Top Credentials)
+These badges receive enhanced styling with accent-colored borders:
+
+1. **AWS Solutions Architect** - `class="badge badge-primary"`
+2. **FinOps Certified** - `class="badge badge-primary"`
+3. **Kwaai.ai Board Member** - `class="badge badge-primary"`
+
+### Standard Badges
 4. 15+ Years Cloud Platforms
 5. RightScale Pioneer
 6. Infrastructure-as-Code Expert
@@ -12,5 +18,172 @@ badges:
 9. Customer Success Leader
 10. Strategic GTM Advisor
 
-container-element: <div class="badges-container" role="list" aria-label="Professional credentials and expertise">
-badge-element: <span class="badge" role="listitem">
+## HTML Structure
+
+```html
+<div class="badges-container" role="list" aria-label="Professional credentials and expertise">
+    <span class="badge badge-primary" role="listitem">AWS Solutions Architect</span>
+    <span class="badge badge-primary" role="listitem">FinOps Certified</span>
+    <span class="badge badge-primary" role="listitem">Kwaai.ai Board Member</span>
+    <span class="badge" role="listitem">15+ Years Cloud Platforms</span>
+    <span class="badge" role="listitem">RightScale Pioneer</span>
+    <span class="badge" role="listitem">Infrastructure-as-Code Expert</span>
+    <span class="badge" role="listitem">Enterprise AI Governance</span>
+    <span class="badge" role="listitem">Pulumi Alumni</span>
+    <span class="badge" role="listitem">Customer Success Leader</span>
+    <span class="badge" role="listitem">Strategic GTM Advisor</span>
+</div>
+```
+
+## Container Layout
+
+### Desktop/Tablet/Mobile (Default)
+```css
+display: flex
+flex-wrap: wrap
+justify-content: center
+gap: var(--space-xs)  /* 8px */
+margin-top: var(--space-md)  /* 24px */
+margin-bottom: var(--space-md)  /* 24px */
+```
+
+### Desktop Grid (≥1025px)
+```css
+justify-content: flex-start  /* Left-aligned in grid */
+gap: 12px  /* Slightly larger gap */
+```
+
+## Badge Styling
+
+### Standard Badge - Default State
+```css
+background: var(--color-surface-elevated)
+color: var(--color-text-secondary)
+font-size: 12px
+font-weight: 400
+padding: var(--space-xs) var(--space-sm)  /* 8px 16px */
+border-radius: 20px  /* Pill shape */
+border: 1px solid hsla(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l), 0.2)
+box-shadow: var(--shadow-sm)
+display: inline-block
+white-space: nowrap
+transition: all 0.2s ease
+```
+
+### Standard Badge - Hover State
+```css
+background: linear-gradient(
+    135deg,
+    var(--color-surface-elevated) 0%,
+    hsl(var(--color-primary-h), calc(var(--color-primary-s) + 10%), calc(var(--color-primary-l) + 8%)) 100%
+)
+border-color: hsla(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l), 0.6)
+box-shadow: 0 4px 8px rgba(255, 185, 0, 0.3)  /* Accent-colored shadow */
+transform: translateY(-2px)
+```
+
+### Primary Badge - Default State
+```css
+background: linear-gradient(
+    135deg,
+    var(--color-surface) 0%,
+    hsl(var(--color-accent-h), 30%, 25%) 100%
+)
+border-color: var(--color-accent)
+color: var(--color-text-secondary)
+box-shadow: var(--shadow-sm)
+```
+
+### Primary Badge - Hover State
+```css
+border-color: var(--color-accent)
+box-shadow: 0 4px 8px rgba(255, 185, 0, 0.4)  /* Stronger accent shadow */
+transform: translateY(-2px)
+```
+
+## Mobile Optimization (≤768px)
+
+### Enhanced Touch Targets
+```css
+padding: 12px 20px  /* Larger for better touch targets */
+font-size: 13px  /* Slightly larger */
+```
+
+## Staggered Animation (Optional Enhancement)
+
+On page load, badges can animate in with a staggered delay:
+
+```css
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.badge {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.badge:nth-child(1) { animation-delay: 0.1s; }
+.badge:nth-child(2) { animation-delay: 0.15s; }
+.badge:nth-child(3) { animation-delay: 0.2s; }
+.badge:nth-child(4) { animation-delay: 0.25s; }
+.badge:nth-child(5) { animation-delay: 0.3s; }
+.badge:nth-child(6) { animation-delay: 0.35s; }
+.badge:nth-child(7) { animation-delay: 0.4s; }
+.badge:nth-child(8) { animation-delay: 0.45s; }
+.badge:nth-child(9) { animation-delay: 0.5s; }
+.badge:nth-child(10) { animation-delay: 0.55s; }
+```
+
+**Note**: Must respect `prefers-reduced-motion`:
+```css
+@media (prefers-reduced-motion: reduce) {
+    .badge {
+        animation: none;
+        opacity: 1;
+    }
+}
+```
+
+## Accessibility
+
+### Semantic HTML
+- Container: `role="list"` with descriptive `aria-label`
+- Individual badges: `role="listitem"`
+
+### Interactive Elements
+- Badges are not interactive (no click/tap behavior)
+- Hover effects are visual enhancements only
+- Cursor remains default (not pointer)
+
+### Touch Targets
+- Mobile: 44x44px minimum (achieved with 13px font + 12px vertical padding + 20px horizontal padding)
+
+### Color Contrast
+- Text on badge background: 4.5:1 minimum ✅
+- Border visibility: Sufficient contrast in both themes
+
+## Design Tokens Used
+
+- `--color-surface-elevated`: Badge background
+- `--color-surface`: Primary badge gradient start
+- `--color-text-secondary`: Badge text
+- `--color-accent`: Primary badge border, hover shadows
+- `--shadow-sm`: Default elevation
+- `--space-xs`: Vertical padding, container gap
+- `--space-sm`: Horizontal padding
+- `--space-md`: Container margins
+
+## Related Specifications
+
+- [colors.md](../design-system/colors.md) - Color tokens and gradients
+- [spacing.md](../design-system/spacing.md) - Padding and gaps
+- [elevation.md](../design-system/elevation.md) - Shadow system
+- [typography.md](../design-system/typography.md) - Font specifications
