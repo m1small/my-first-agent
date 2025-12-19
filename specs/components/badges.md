@@ -2,18 +2,20 @@
 
 ## Badge List
 
-### Primary Badges (Top Credentials)
-These badges receive enhanced styling with accent-colored borders:
+All badges now use the gold gradient styling for visual consistency.
 
-1. **AWS Solutions Architect** - `class="badge badge-primary"`
-2. **FinOps Certified** - `class="badge badge-primary"`
-3. **Kwaai.ai Board Member** - `class="badge badge-primary"`
+### Row 1 (3 badges)
+1. AWS Solutions Architect
+2. FinOps Certified
+3. Kwaai.ai Board Member
 
-### Standard Badges
+### Row 2 (4 badges)
 4. 15+ Years Cloud Platforms
 5. RightScale Pioneer
 6. Infrastructure-as-Code Expert
 7. Enterprise AI Governance
+
+### Row 3 (3 badges)
 8. Pulumi Alumni
 9. Customer Success Leader
 10. Strategic GTM Advisor
@@ -22,13 +24,18 @@ These badges receive enhanced styling with accent-colored borders:
 
 ```html
 <div class="badges-container" role="list" aria-label="Professional credentials and expertise">
-    <span class="badge badge-primary" role="listitem">AWS Solutions Architect</span>
-    <span class="badge badge-primary" role="listitem">FinOps Certified</span>
-    <span class="badge badge-primary" role="listitem">Kwaai.ai Board Member</span>
+    <!-- Row 1: 3 badges -->
+    <span class="badge" role="listitem">AWS Solutions Architect</span>
+    <span class="badge" role="listitem">FinOps Certified</span>
+    <span class="badge" role="listitem">Kwaai.ai Board Member</span>
+    
+    <!-- Row 2: 4 badges -->
     <span class="badge" role="listitem">15+ Years Cloud Platforms</span>
     <span class="badge" role="listitem">RightScale Pioneer</span>
     <span class="badge" role="listitem">Infrastructure-as-Code Expert</span>
     <span class="badge" role="listitem">Enterprise AI Governance</span>
+    
+    <!-- Row 3: 3 badges -->
     <span class="badge" role="listitem">Pulumi Alumni</span>
     <span class="badge" role="listitem">Customer Success Leader</span>
     <span class="badge" role="listitem">Strategic GTM Advisor</span>
@@ -37,52 +44,24 @@ These badges receive enhanced styling with accent-colored borders:
 
 ## Container Layout
 
-### Desktop/Tablet/Mobile (Default)
+### All Breakpoints (Centered)
 ```css
 display: flex
 flex-wrap: wrap
-justify-content: center
+justify-content: center  /* Always centered */
 gap: var(--space-xs)  /* 8px */
 margin-top: var(--space-md)  /* 24px */
 margin-bottom: var(--space-md)  /* 24px */
-```
-
-### Desktop Grid (≥1025px)
-```css
-justify-content: flex-start  /* Left-aligned in grid */
-gap: 12px  /* Slightly larger gap */
+max-width: 800px  /* Constrain width for 3-4-3 layout */
+margin-left: auto
+margin-right: auto
 ```
 
 ## Badge Styling
 
-### Standard Badge - Default State
-```css
-background: var(--color-surface-elevated)
-color: var(--color-text-secondary)
-font-size: 12px
-font-weight: 400
-padding: var(--space-xs) var(--space-sm)  /* 8px 16px */
-border-radius: 20px  /* Pill shape */
-border: 1px solid hsla(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l), 0.2)
-box-shadow: var(--shadow-sm)
-display: inline-block
-white-space: nowrap
-transition: all 0.2s ease
-```
+### All Badges - Default State (Gold Gradient)
+All badges now use the gold gradient styling:
 
-### Standard Badge - Hover State
-```css
-background: linear-gradient(
-    135deg,
-    var(--color-surface-elevated) 0%,
-    hsl(var(--color-primary-h), calc(var(--color-primary-s) + 10%), calc(var(--color-primary-l) + 8%)) 100%
-)
-border-color: hsla(var(--color-accent-h), var(--color-accent-s), var(--color-accent-l), 0.6)
-box-shadow: 0 4px 8px rgba(255, 185, 0, 0.3)  /* Accent-colored shadow */
-transform: translateY(-2px)
-```
-
-### Primary Badge - Default State
 ```css
 background: linear-gradient(
     135deg,
@@ -91,13 +70,20 @@ background: linear-gradient(
 )
 border-color: var(--color-accent)
 color: var(--color-text-secondary)
+font-size: 12px
+font-weight: 400
+padding: var(--space-xs) var(--space-sm)  /* 8px 16px */
+border-radius: 20px  /* Pill shape */
 box-shadow: var(--shadow-sm)
+display: inline-block
+white-space: nowrap
+transition: all 0.2s ease
 ```
 
-### Primary Badge - Hover State
+### All Badges - Hover State
 ```css
 border-color: var(--color-accent)
-box-shadow: 0 4px 8px rgba(255, 185, 0, 0.4)  /* Stronger accent shadow */
+box-shadow: 0 4px 8px rgba(255, 185, 0, 0.4)  /* Accent-colored shadow */
 transform: translateY(-2px)
 ```
 

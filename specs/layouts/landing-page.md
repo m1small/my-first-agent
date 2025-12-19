@@ -144,53 +144,7 @@ main {
 }
 ```
 
-### Desktop Grid Layout (≥1025px)
-
-**Asymmetric Grid with Sidebar**:
-
-```css
-@media (min-width: 1025px) {
-    main {
-        display: grid;
-        grid-template-columns: 300px 1fr;
-        grid-template-areas:
-            "sidebar header"
-            "sidebar bio"
-            "badges badges"
-            "cta cta";
-        gap: var(--space-xl);  /* 48px */
-        max-width: 1200px;
-        text-align: left;  /* Left-align for better readability */
-    }
-    
-    /* Future: Profile sidebar area */
-    .profile-sidebar {
-        grid-area: sidebar;
-        /* Reserved for future profile image, social links */
-    }
-    
-    h1 {
-        grid-area: header;
-        text-align: left;
-    }
-    
-    .bio {
-        grid-area: bio;
-        text-align: left;
-        max-width: 100%;  /* Full width in grid */
-    }
-    
-    .badges-container {
-        grid-area: badges;
-        justify-content: flex-start;  /* Left-aligned */
-    }
-    
-    .cta-container {
-        grid-area: cta;
-        justify-content: center;  /* Centered */
-    }
-}
-```
+**Note**: Desktop grid layout removed. All content remains centered at all breakpoints.
 
 ## Breakpoint Strategy
 
@@ -199,23 +153,23 @@ main {
 | Mobile | ≤480px | Single column | Center |
 | Tablet | 481px - 768px | Single column | Center |
 | Desktop (Small) | 769px - 1024px | Single column | Center |
-| Desktop (Large) | ≥1025px | Asymmetric grid | Left (except CTA) |
+| Desktop (Large) | ≥1025px | Single column | Center |
 
 ## Component Integration
 
 ### Headline
-- Mobile/Tablet: Centered
-- Desktop Grid: Left-aligned in header area
+- All breakpoints: Centered
 - See [headline.md](../components/headline.md)
 
 ### Bio
-- Mobile/Tablet: Centered, max-width 700px
-- Desktop Grid: Left-aligned, full width with card styling
+- All breakpoints: Centered, max-width 700px
+- Card styling with elevation
 - See [bio.md](../components/bio.md)
 
 ### Badges
-- Mobile/Tablet: Centered, flex-wrap
-- Desktop Grid: Left-aligned, grid layout
+- All breakpoints: Centered, flex-wrap
+- Arranged in 3-4-3 rows
+- All badges use gold gradient styling
 - See [badges.md](../components/badges.md)
 
 ### CTA Button

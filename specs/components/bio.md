@@ -98,14 +98,12 @@ margin-right: auto
 
 ## Responsive Alignment
 
-### Desktop (≥1025px)
+### All Breakpoints
 ```css
-text-align: left  /* Better readability for long text */
-```
-
-### Tablet and Mobile (≤1024px)
-```css
-text-align: center
+text-align: center  /* Centered at all screen sizes */
+max-width: 700px  /* Optimal reading length */
+margin-left: auto
+margin-right: auto
 ```
 
 ## Content Emphasis

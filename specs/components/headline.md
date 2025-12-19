@@ -47,14 +47,9 @@ margin-bottom: var(--space-sm)  /* 16px */
 
 ## Responsive Alignment
 
-### Desktop (≥1025px)
+### All Breakpoints
 ```css
-text-align: left  /* Left-aligned in grid layout */
-```
-
-### Tablet and Mobile (≤1024px)
-```css
-text-align: center
+text-align: center  /* Centered at all screen sizes */
 ```
 
 ## Accessibility
